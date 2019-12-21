@@ -14,5 +14,5 @@ public class Constant {
 	public static final String MENU_TITLE4 = "NEW GAME";
 
 	public static BorderLayout bl1 = new BorderLayout();
-	public static HeadMenu hm;
+	public static HeadMenu hm = new HeadMenu();
 }
