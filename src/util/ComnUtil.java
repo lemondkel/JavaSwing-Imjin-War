@@ -13,11 +13,14 @@ public class ComnUtil {
 	 * @param targetFrame 대상 프레임 영역
 	 */
 	public static void setCustomLayout(JFrame targetFrame) {
+		targetFrame.pack();
+		targetFrame.repaint();
 		targetFrame.setLayout(Constant.bl1);
 		targetFrame.setTitle(Constant.GAME_TITLE);
 		targetFrame.setSize(1024, 800);
 		targetFrame.setLocationRelativeTo(null);
 		targetFrame.setVisible(true);
+		targetFrame.setResizable(false);
 
 		// 맨 위에 메뉴 부착
 		targetFrame.setJMenuBar(Constant.hm);
