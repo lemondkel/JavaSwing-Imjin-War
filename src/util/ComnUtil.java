@@ -1,7 +1,6 @@
 package util;
 
 import javax.swing.*;
-import java.awt.*;
 
 /**
  * 공통 유틸
@@ -14,12 +13,10 @@ public class ComnUtil {
 	 * @param targetFrame 대상 프레임 영역
 	 */
 	public static void setCustomLayout(JFrame targetFrame) {
-		Dimension dimension = targetFrame.getPreferredSize();
-
 		targetFrame.setLayout(Constant.bl1);
 		targetFrame.setTitle(Constant.GAME_TITLE);
 		targetFrame.setSize(1024, 800);
-		targetFrame.setLocation((int) dimension.getWidth(), (int) dimension.getHeight());
+		targetFrame.setLocationRelativeTo(null);
 		targetFrame.setVisible(true);
 
 		// 맨 위에 메뉴 부착
