@@ -1,5 +1,7 @@
 package view.element;
 
+import util.Constant;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -11,8 +13,25 @@ import java.awt.*;
  */
 public class CountrySelect extends JPanel {
 
-	CountrySelect() {
-		this.setLayout(new GridLayout(4, 1, 0, 0));
+	private JPanel CountrySelectTop;
+	private JPanel CountrySelectCenter;
+	private JPanel CountrySelectBottom;
 
+	CountrySelect() {
+		CountrySelectTop = new JPanel();
+		CountrySelectCenter = new JPanel();
+		CountrySelectBottom = new JPanel();
+
+		CountrySelectTop.setLayout(new FlowLayout());
+		CountrySelectTop.add(new JLabel("국가 선택"));
+
+		CountrySelectCenter.setLayout(Constant.bl1);
+		CountrySelectBottom.setLayout(Constant.bl1);
+
+		this.setLayout(Constant.bl1);
+		this.add(CountrySelectTop, BorderLayout.NORTH);
+		this.add(CountrySelectCenter, BorderLayout.NORTH);
+		this.add(CountrySelectBottom, BorderLayout.NORTH);
+		this.setVisible(true);
 	}
 }

@@ -10,6 +10,7 @@ public class MainMenu extends JPanel {
 	private JButton menu2;
 	private JButton menu3;
 	private JButton menu4;
+	private CountrySelect countrySelect;
 
 	MainMenu() {
 		Font font = new Font("굴림", Font.CENTER_BASELINE, 22);
@@ -31,9 +32,16 @@ public class MainMenu extends JPanel {
 			// 패널의 가운데 요소 지우기
 			JPanel target = (JPanel) this.getParent();
 			target.remove(this);
+			System.out.println("타겟" + target);
 
 			// 국가 선택창 가운데에 추가
-			target.add(new CountrySelect(), BorderLayout.CENTER);
+			countrySelect = new CountrySelect();
+			target.add(countrySelect, BorderLayout.CENTER);
+			System.out.println("국가선택창" + countrySelect);
+			System.out.println(countrySelect.getParent());
+			countrySelect.setVisible(true);
+			countrySelect.setBackground(Color.RED);
+
 			target.repaint();
 		});
 

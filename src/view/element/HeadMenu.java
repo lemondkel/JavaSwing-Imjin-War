@@ -2,6 +2,9 @@ package view.element;
 
 import javax.swing.*;
 
+/**
+ * 상단 메뉴바
+ */
 public class HeadMenu extends JMenuBar {
 	private JMenu menu1;
 	private JMenuItem menu1Item1;
